@@ -1,0 +1,13 @@
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\bin\Debug\HashCalculate.exe.config
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\bin\Debug\HashCalculate.exe
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\bin\Debug\HashCalculate.pdb
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.csproj.AssemblyReference.cache
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.Form1.resources
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.Properties.Resources.resources
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.csproj.GenerateResource.cache
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.csproj.CoreCompileInputs.cache
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.exe
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.pdb
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\bin\Debug\HashLib.dll
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\obj\Debug\HashCalculate.csproj.CopyComplete
+D:\Baitap\MatMaHoc\ThucHanh\Lab4-Nhom8\Bai1\HashCalculate\bin\Debug\BouncyCastle.Crypto.dll
