@@ -68,18 +68,20 @@ namespace HashCalculate
             }
         }
 
-        public static string HextoString(string message)
+        public static string HextoString(string message, Encoding encoding)
         {
-            byte[] hts = Enumerable.Range(0, message.Length)
-                     .Where(x => x % 2 == 0)
-                     .Select(x => Convert.ToByte(message.Substring(x, 2), 16))
-                     .ToArray();
-            return Encoding.ASCII.GetString(hts);
+            int numberChars = message.Length;
+            byte[] bytes = new byte[numberChars / 2];
+            for (int i = 0; i < numberChars; i += 2)
+            {
+                bytes[i / 2] = Convert.ToByte(message.Substring(i, 2), 16);
+            }
+            return encoding.GetString(bytes);
         }
 
         public static string HexMd5Hash(string message)
         {
-            return TextMd5Hash(HextoString(message));
+            return TextMd5Hash(HextoString(message, Encoding.UTF8));
         }
 
         static string TextSHA1Hash(string message)
@@ -100,7 +102,7 @@ namespace HashCalculate
 
         public static string HexSHA1Hash(string message)
         {
-            return TextSHA1Hash(HextoString(message));
+            return TextSHA1Hash(HextoString(message, Encoding.UTF8));
         }
 
         static string TextSha256Hash(string message)
@@ -121,7 +123,7 @@ namespace HashCalculate
 
         static string HexSha256Hash(string message)
         {
-            return TextSha256Hash(HextoString(message));
+            return TextSha256Hash(HextoString(message, Encoding.UTF8));
         }
     }
 }
