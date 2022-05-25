@@ -76,11 +76,12 @@ namespace HashCalculate
             this.btnOpenfile.TabIndex = 2;
             this.btnOpenfile.Text = "Open";
             this.btnOpenfile.UseVisualStyleBackColor = true;
+            this.btnOpenfile.Click += new System.EventHandler(this.btnOpenfile_Click);
             // 
             // tbMD5
             // 
             this.tbMD5.Location = new System.Drawing.Point(149, 148);
-            this.tbMD5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMD5.Margin = new System.Windows.Forms.Padding(4);
             this.tbMD5.Name = "tbMD5";
             this.tbMD5.Size = new System.Drawing.Size(563, 22);
             this.tbMD5.TabIndex = 3;
@@ -88,7 +89,7 @@ namespace HashCalculate
             // tbSHA1
             // 
             this.tbSHA1.Location = new System.Drawing.Point(149, 233);
-            this.tbSHA1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSHA1.Margin = new System.Windows.Forms.Padding(4);
             this.tbSHA1.Name = "tbSHA1";
             this.tbSHA1.Size = new System.Drawing.Size(563, 22);
             this.tbSHA1.TabIndex = 4;
@@ -96,7 +97,7 @@ namespace HashCalculate
             // tbSHA3
             // 
             this.tbSHA3.Location = new System.Drawing.Point(149, 330);
-            this.tbSHA3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSHA3.Margin = new System.Windows.Forms.Padding(4);
             this.tbSHA3.Name = "tbSHA3";
             this.tbSHA3.Size = new System.Drawing.Size(563, 22);
             this.tbSHA3.TabIndex = 5;
@@ -106,7 +107,7 @@ namespace HashCalculate
             this.btnCalculate.BackColor = System.Drawing.Color.Silver;
             this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculate.Location = new System.Drawing.Point(331, 389);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(196, 47);
             this.btnCalculate.TabIndex = 6;
@@ -118,7 +119,7 @@ namespace HashCalculate
             // 
             this.cbMD5.AutoSize = true;
             this.cbMD5.Location = new System.Drawing.Point(44, 151);
-            this.cbMD5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMD5.Margin = new System.Windows.Forms.Padding(4);
             this.cbMD5.Name = "cbMD5";
             this.cbMD5.Size = new System.Drawing.Size(59, 21);
             this.cbMD5.TabIndex = 7;
@@ -129,7 +130,7 @@ namespace HashCalculate
             // 
             this.cbSHA1.AutoSize = true;
             this.cbSHA1.Location = new System.Drawing.Point(44, 236);
-            this.cbSHA1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSHA1.Margin = new System.Windows.Forms.Padding(4);
             this.cbSHA1.Name = "cbSHA1";
             this.cbSHA1.Size = new System.Drawing.Size(66, 21);
             this.cbSHA1.TabIndex = 8;
@@ -140,7 +141,7 @@ namespace HashCalculate
             // 
             this.cbSHA3.AutoSize = true;
             this.cbSHA3.Location = new System.Drawing.Point(44, 334);
-            this.cbSHA3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSHA3.Margin = new System.Windows.Forms.Padding(4);
             this.cbSHA3.Name = "cbSHA3";
             this.cbSHA3.Size = new System.Drawing.Size(66, 21);
             this.cbSHA3.TabIndex = 9;
