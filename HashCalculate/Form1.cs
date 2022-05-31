@@ -127,30 +127,7 @@ namespace HashCalculate
         {
             return TextSha256Hash(HextoString(message));
         }
-
-        // Load file
-        public byte[] FileToByteArray(string fileName)
-        {
-            byte[] buff = null;
-            FileStream fs = new FileStream(fileName,
-                                           FileMode.Open,
-                                           FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            long numBytes = new FileInfo(fileName).Length;
-            buff = br.ReadBytes((int)numBytes);
-            return buff;
-        }
-
-        private static string GetMD5HashFromFile(string fileName)
-        {
-            using (var md5 = MD5.Create())
-            {
-                using (var stream = File.OpenRead(fileName))
-                {
-                    return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", string.Empty).ToLower();
-                }
-            }
-        }
+   
         private void btnOpenfile_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
