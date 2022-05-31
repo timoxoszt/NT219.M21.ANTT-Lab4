@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using HashLib;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace HashCalculate
 {
@@ -22,10 +23,11 @@ namespace HashCalculate
         string md5_output;
         string sha1_output;
         string sha256_output;
+        private static object encoding;
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            string input = data.Text;
+            string input = tbData.Text;
 
             switch (comboBoxType.Text.ToString())
             {
@@ -40,7 +42,7 @@ namespace HashCalculate
                     sha256_output = HexSha256Hash(input);
                     break;
                 case "File":
-                    md5_output = "hehe";
+                    
                     break;
             }
             tbMD5.Text = md5_output;
@@ -69,7 +71,7 @@ namespace HashCalculate
             }
         }
 
-        public static string HextoString(string message, Encoding encoding)
+        public static string HextoString(string message)
         {
             int numberChars = message.Length;
             byte[] bytes = new byte[numberChars / 2];
@@ -77,12 +79,11 @@ namespace HashCalculate
             {
                 bytes[i / 2] = Convert.ToByte(message.Substring(i, 2), 16);
             }
-            return encoding.GetString(bytes);
+            return Encoding.UTF8.GetString(bytes);
         }
-
         public static string HexMd5Hash(string message)
         {
-            return TextMd5Hash(HextoString(message, Encoding.UTF8));
+            return TextMd5Hash(HextoString(message));
         }
 
         static string TextSHA1Hash(string message)
@@ -103,7 +104,7 @@ namespace HashCalculate
 
         public static string HexSHA1Hash(string message)
         {
-            return TextSHA1Hash(HextoString(message, Encoding.UTF8));
+            return TextSHA1Hash(HextoString(message));
         }
 
         static string TextSha256Hash(string message)
@@ -124,7 +125,7 @@ namespace HashCalculate
 
         static string HexSha256Hash(string message)
         {
-            return TextSha256Hash(HextoString(message, Encoding.UTF8));
+            return TextSha256Hash(HextoString(message));
         }
 
         // Load file
@@ -152,16 +153,19 @@ namespace HashCalculate
         }
         private void btnOpenfile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog choofdlog = new OpenFileDialog();
-            choofdlog.Filter = "All Files (*.*)|*.*";
-            choofdlog.FilterIndex = 1;
-            choofdlog.Multiselect = true;
-
-            if (choofdlog.ShowDialog() == DialogResult.OK)
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "|*.txt";
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                string sFileName = choofdlog.FileName;
-                tbMD5.Text = GetMD5HashFromFile(sFileName);
-            }            
+                tbData.Text = ofd.FileName;
+                StreamReader srd = new StreamReader(ofd.FileName);
+                String data = srd.ReadToEnd();
+                srd.Close();
+
+                md5_output = TextMd5Hash(data);
+                sha1_output = TextSHA1Hash(data);
+                sha256_output = TextSha256Hash(data);
+            }
         }
 
       

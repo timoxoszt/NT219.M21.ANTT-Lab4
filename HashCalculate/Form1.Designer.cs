@@ -30,17 +30,17 @@ namespace HashCalculate
         private void InitializeComponent()
         {
             this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.data = new System.Windows.Forms.TextBox();
+            this.tbData = new System.Windows.Forms.TextBox();
             this.btnOpenfile = new System.Windows.Forms.Button();
             this.tbMD5 = new System.Windows.Forms.TextBox();
             this.tbSHA1 = new System.Windows.Forms.TextBox();
             this.tbSHA3 = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.cbMD5 = new System.Windows.Forms.CheckBox();
-            this.cbSHA1 = new System.Windows.Forms.CheckBox();
-            this.cbSHA3 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbMD5 = new System.Windows.Forms.Label();
+            this.lbSHA1 = new System.Windows.Forms.Label();
+            this.lbSHA3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxType
@@ -58,14 +58,14 @@ namespace HashCalculate
             this.comboBoxType.Size = new System.Drawing.Size(121, 28);
             this.comboBoxType.TabIndex = 0;
             // 
-            // data
+            // tbData
             // 
-            this.data.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.Location = new System.Drawing.Point(149, 36);
-            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(563, 27);
-            this.data.TabIndex = 1;
+            this.tbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbData.Location = new System.Drawing.Point(149, 36);
+            this.tbData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbData.Name = "tbData";
+            this.tbData.Size = new System.Drawing.Size(563, 27);
+            this.tbData.TabIndex = 1;
             // 
             // btnOpenfile
             // 
@@ -115,39 +115,6 @@ namespace HashCalculate
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // cbMD5
-            // 
-            this.cbMD5.AutoSize = true;
-            this.cbMD5.Location = new System.Drawing.Point(44, 151);
-            this.cbMD5.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMD5.Name = "cbMD5";
-            this.cbMD5.Size = new System.Drawing.Size(59, 21);
-            this.cbMD5.TabIndex = 7;
-            this.cbMD5.Text = "MD5";
-            this.cbMD5.UseVisualStyleBackColor = true;
-            // 
-            // cbSHA1
-            // 
-            this.cbSHA1.AutoSize = true;
-            this.cbSHA1.Location = new System.Drawing.Point(44, 236);
-            this.cbSHA1.Margin = new System.Windows.Forms.Padding(4);
-            this.cbSHA1.Name = "cbSHA1";
-            this.cbSHA1.Size = new System.Drawing.Size(66, 21);
-            this.cbSHA1.TabIndex = 8;
-            this.cbSHA1.Text = "SHA1";
-            this.cbSHA1.UseVisualStyleBackColor = true;
-            // 
-            // cbSHA3
-            // 
-            this.cbSHA3.AutoSize = true;
-            this.cbSHA3.Location = new System.Drawing.Point(44, 334);
-            this.cbSHA3.Margin = new System.Windows.Forms.Padding(4);
-            this.cbSHA3.Name = "cbSHA3";
-            this.cbSHA3.Size = new System.Drawing.Size(66, 21);
-            this.cbSHA3.TabIndex = 9;
-            this.cbSHA3.Text = "SHA3";
-            this.cbSHA3.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -168,22 +135,49 @@ namespace HashCalculate
             this.label2.TabIndex = 11;
             this.label2.Text = "Data";
             // 
+            // lbMD5
+            // 
+            this.lbMD5.AutoSize = true;
+            this.lbMD5.Location = new System.Drawing.Point(66, 148);
+            this.lbMD5.Name = "lbMD5";
+            this.lbMD5.Size = new System.Drawing.Size(37, 17);
+            this.lbMD5.TabIndex = 12;
+            this.lbMD5.Text = "MD5";
+            // 
+            // lbSHA1
+            // 
+            this.lbSHA1.AutoSize = true;
+            this.lbSHA1.Location = new System.Drawing.Point(66, 233);
+            this.lbSHA1.Name = "lbSHA1";
+            this.lbSHA1.Size = new System.Drawing.Size(44, 17);
+            this.lbSHA1.TabIndex = 13;
+            this.lbSHA1.Text = "SHA1";
+            // 
+            // lbSHA3
+            // 
+            this.lbSHA3.AutoSize = true;
+            this.lbSHA3.Location = new System.Drawing.Point(66, 330);
+            this.lbSHA3.Name = "lbSHA3";
+            this.lbSHA3.Size = new System.Drawing.Size(44, 17);
+            this.lbSHA3.TabIndex = 14;
+            this.lbSHA3.Text = "SHA3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbSHA3);
+            this.Controls.Add(this.lbSHA1);
+            this.Controls.Add(this.lbMD5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbSHA3);
-            this.Controls.Add(this.cbSHA1);
-            this.Controls.Add(this.cbMD5);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.tbSHA3);
             this.Controls.Add(this.tbSHA1);
             this.Controls.Add(this.tbMD5);
             this.Controls.Add(this.btnOpenfile);
-            this.Controls.Add(this.data);
+            this.Controls.Add(this.tbData);
             this.Controls.Add(this.comboBoxType);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -197,17 +191,17 @@ namespace HashCalculate
         #endregion
 
         private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.TextBox data;
+        private System.Windows.Forms.TextBox tbData;
         private System.Windows.Forms.Button btnOpenfile;
         private System.Windows.Forms.TextBox tbMD5;
         private System.Windows.Forms.TextBox tbSHA1;
         private System.Windows.Forms.TextBox tbSHA3;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.CheckBox cbMD5;
-        private System.Windows.Forms.CheckBox cbSHA1;
-        private System.Windows.Forms.CheckBox cbSHA3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMD5;
+        private System.Windows.Forms.Label lbSHA1;
+        private System.Windows.Forms.Label lbSHA3;
     }
 }
 
